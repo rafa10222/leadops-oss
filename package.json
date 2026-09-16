@@ -1,0 +1,17 @@
+{
+  "name": "leadops-oss",
+  "version": "0.1.0",
+  "description": "Open-source infrastructure for AI-powered lead operations.",
+  "type": "module",
+  "private": false,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "node --test",
+    "lint": "node scripts/check-syntax.js"
+  },
+  "keywords": ["leadops", "crm", "whatsapp", "marketing-automation", "open-source", "lead-scoring", "ai-agents"],
+  "author": "Rafael Daher",
+  "license": "MIT"
+}
