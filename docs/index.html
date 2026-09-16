@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="LeadOps OSS is open-source infrastructure for AI-powered lead operations, connecting acquisition, qualification, messaging, CRM and attribution." />
+  <meta property="og:title" content="LeadOps OSS — AI-powered lead operations infrastructure" />
+  <meta property="og:description" content="Open-source, self-hosted infrastructure for connecting acquisition, qualification, messaging, CRM and attribution." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rafa10222.github.io/leadops-oss/" />
+  <title>LeadOps OSS — Open infrastructure for AI-powered lead operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="LeadOps OSS home">
+        <span class="brand-mark">L</span>
+        <span>LeadOps OSS</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#problem">Why</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#roadmap">Roadmap</a>
+        <a class="nav-cta" href="https://github.com/rafa10222/leadops-oss" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="dot"></span> OPEN-SOURCE · SELF-HOSTED · AI-NATIVE</div>
+          <h1>Lead operations should be <span class="gradient-text">infrastructure</span>, not duct tape.</h1>
+          <p class="hero-sub">LeadOps OSS is an open orchestration layer that connects paid acquisition, qualification, AI agents, WhatsApp, CRM workflows, human handoff and attribution — without locking teams into another proprietary stack.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/rafa10222/leadops-oss" target="_blank" rel="noreferrer">Explore the repository</a>
+            <a class="btn btn-secondary" href="#architecture">See how it works</a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>Provider-neutral</strong><span>Adapters instead of lock-in</span></div>
+            <div><strong>Explainable</strong><span>Auditable lead scoring</span></div>
+            <div><strong>Self-hosted</strong><span>Your workflow, your data</span></div>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal delay-1" aria-label="LeadOps workflow illustration">
+          <div class="terminal-bar"><span></span><span></span><span></span><code>leadops pipeline</code></div>
+          <div class="flow-stack">
+            <div class="flow-node accent"><span class="node-icon">01</span><div><small>ACQUISITION</small><strong>Meta Ads · Google Ads · Forms</strong></div></div>
+            <div class="flow-line"></div>
+            <div class="flow-node"><span class="node-icon">02</span><div><small>INGESTION</small><strong>Normalize · Deduplicate · Validate</strong></div></div>
+            <div class="flow-line"></div>
+            <div class="flow-node"><span class="node-icon">03</span><div><small>INTELLIGENCE</small><strong>Scoring · Qualification · AI Agents</strong></div></div>
+            <div class="flow-line"></div>
+            <div class="flow-node"><span class="node-icon">04</span><div><small>ACTIVATION</small><strong>WhatsApp · CRM · Human Handoff</strong></div></div>
+            <div class="flow-line"></div>
+            <div class="flow-node success"><span class="node-icon">05</span><div><small>FEEDBACK LOOP</small><strong>Conversion · Attribution · Revenue</strong></div></div>
+          </div>
+          <div class="panel-foot"><span class="status-dot"></span> designed for extensibility, observability and control</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problem" id="problem">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">THE GAP</div>
+          <h2>Businesses do not lose leads because they lack tools. They lose them between tools.</h2>
+          <p>Most SMB lead stacks are fragmented across ad platforms, forms, messaging apps, spreadsheets, CRMs and manual follow-up. Context disappears at every transition.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="card reveal"><span class="card-index">01</span><h3>Fragmented acquisition</h3><p>Lead sources deliver different payloads, identifiers and attribution metadata with no shared operating model.</p></article>
+          <article class="card reveal delay-1"><span class="card-index">02</span><h3>Manual qualification</h3><p>Sales teams repeatedly ask the same questions because qualification logic lives in people instead of infrastructure.</p></article>
+          <article class="card reveal delay-2"><span class="card-index">03</span><h3>Broken feedback loops</h3><p>Marketing knows the cost per lead. Sales knows what closed. The two systems rarely share a reliable event trail.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture" id="architecture">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">ARCHITECTURE</div>
+          <h2>A neutral operations layer around the lead lifecycle.</h2>
+          <p>LeadOps keeps the core domain portable. Providers become adapters, business rules stay inspectable, and outbound actions remain replaceable.</p>
+        </div>
+
+        <div class="architecture-map reveal">
+          <div class="arch-column"><span class="arch-label">Sources</span><div class="arch-item">Meta Lead Ads</div><div class="arch-item">Google Ads</div><div class="arch-item">Landing Pages</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-column core"><span class="arch-label">LeadOps Core</span><div class="arch-item highlighted">Ingestion API</div><div class="arch-item highlighted">Deduplication</div><div class="arch-item highlighted">Scoring Engine</div><div class="arch-item highlighted">Qualification</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-column"><span class="arch-label">Destinations</span><div class="arch-item">WhatsApp</div><div class="arch-item">CRM</div><div class="arch-item">Sales Team</div></div>
+          <div class="arch-arrow loop">↺</div>
+          <div class="arch-column"><span class="arch-label">Feedback</span><div class="arch-item">Appointments</div><div class="arch-item">Proposals</div><div class="arch-item">Revenue</div></div>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle reveal"><strong>Provider-neutral by default</strong><p>Domain logic does not belong to a single CRM, ad platform or model vendor.</p></div>
+          <div class="principle reveal delay-1"><strong>Human handoff by design</strong><p>AI supports qualification and routing without removing operator control.</p></div>
+          <div class="principle reveal delay-2"><strong>Explainability first</strong><p>Scoring and decisions should be inspectable before they become “smart”.</p></div>
+          <div class="principle reveal delay-3"><strong>Self-hosting friendly</strong><p>Own the deployment model and extend the stack instead of renting the workflow.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capabilities">
+      <div class="container capability-shell reveal">
+        <div class="capability-copy">
+          <div class="eyebrow">V0.1 FOUNDATION</div>
+          <h2>Already more than a concept.</h2>
+          <p>The public repository includes a working reference implementation and a roadmap toward a production-grade lead operations layer.</p>
+          <a class="text-link" href="https://github.com/rafa10222/leadops-oss" target="_blank" rel="noreferrer">Inspect the codebase →</a>
+        </div>
+        <div class="feature-list">
+          <div><span>✓</span> Generic REST lead ingestion</div>
+          <div><span>✓</span> Explainable lead scoring</div>
+          <div><span>✓</span> Cold / warm / hot classification</div>
+          <div><span>✓</span> Deduplication by provider ID</div>
+          <div><span>✓</span> Generic CRM webhook adapter</div>
+          <div><span>✓</span> WhatsApp Cloud API adapter</div>
+          <div><span>✓</span> Docker + automated tests + CI</div>
+          <div><span>✓</span> Security and contribution docs</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">ROADMAP</div>
+          <h2>From transparent foundation to durable infrastructure.</h2>
+        </div>
+        <div class="roadmap-track">
+          <article class="roadmap-item done reveal"><div class="roadmap-marker"></div><div><small>NOW · V0.1</small><h3>Reference foundation</h3><p>Ingestion, scoring, provider adapters, Docker, tests and CI.</p></div></article>
+          <article class="roadmap-item reveal delay-1"><div class="roadmap-marker"></div><div><small>NEXT · V0.2</small><h3>Durable core</h3><p>PostgreSQL, migrations, authentication, audit logs and reliable outbound jobs.</p></div></article>
+          <article class="roadmap-item reveal delay-2"><div class="roadmap-marker"></div><div><small>THEN · V0.3</small><h3>AI qualification layer</h3><p>Provider-neutral structured AI qualification, confidence gates and human review.</p></div></article>
+          <article class="roadmap-item reveal delay-3"><div class="roadmap-marker"></div><div><small>LONGER TERM</small><h3>Closed-loop attribution</h3><p>Sales outcomes, conversion events and acquisition-platform feedback.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-card reveal">
+        <div>
+          <div class="eyebrow">BUILD IN THE OPEN</div>
+          <h2>Own the lead workflow. Extend the infrastructure.</h2>
+          <p>LeadOps OSS is early, public and intentionally open to builders working on the same messy integration problems.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://github.com/rafa10222/leadops-oss" target="_blank" rel="noreferrer">View repository</a>
+          <a class="btn btn-secondary" href="https://github.com/rafa10222/leadops-oss/issues" target="_blank" rel="noreferrer">Open issues</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div class="brand"><span class="brand-mark small">L</span><span>LeadOps OSS</span></div>
+      <p>Open-source infrastructure for AI-powered lead operations.</p>
+      <a href="https://github.com/rafa10222/leadops-oss" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
