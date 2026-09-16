@@ -1,0 +1,12 @@
+{
+  "id": "provider-lead-id",
+  "full_name": "Example Person",
+  "email": "person@example.com",
+  "phone_number": "+5561999999999",
+  "campaign_id": "cmp_123",
+  "campaign_name": "High Intent",
+  "intent": "quote",
+  "estimated_value": 12000,
+  "consent_to_contact": true,
+  "custom_fields": { "city": "Brasilia" }
+}
